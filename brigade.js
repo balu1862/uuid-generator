@@ -1,7 +1,7 @@
 const { events, Job } = require("brigadier");
 
-events.on("push", (e, project) => {
-  console.log("received push for commit " + e.commit)
+events.on("brigade.sh/cli", "exec", (e, project) => {
+  console.log("received push for commit " )
 
   var testJob = new Job("test-runner")
 
